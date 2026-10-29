@@ -6,6 +6,14 @@
 <title>Hamish Roastery</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Hamish Roastery (محمصة هامش) — specialty coffee roastery in Al-Mansour, Al-Dawoodi, Baghdad. Espresso, V60, Chemex, cold brew, nitro and matcha.">
+<meta name="theme-color" content="#052b38">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hamish Roastery | محمصة هامش">
+<meta property="og:description" content="Specialty coffee roastery in Al-Mansour, Baghdad. Espresso, V60, Chemex, cold brew, nitro and matcha.">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_IQ">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CafeOrCoffeeShop", "name": "Hamish Roastery", "alternateName": "محمصة هامش", "description": "Specialty coffee roastery in Al-Mansour, Al-Dawoodi, Baghdad.", "telephone": "+9647730479414", "servesCuisine": "Coffee", "priceRange": "IQD 3,500–7,500", "currenciesAccepted": "IQD", "address": {"@type": "PostalAddress", "streetAddress": "End of Al-Saa Restaurant street, next to NVN, near the railway, Al-Dawoodi", "addressLocality": "Al-Mansour, Baghdad", "addressCountry": "IQ"}, "hasMap": "https://maps.app.goo.gl/n654SAwnXCHGoM8R9", "sameAs": ["https://www.instagram.com/hamishroasteryiq/"], "hasMenu": "#menu"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&display=swap">
@@ -16,7 +24,7 @@
   --copper: #cc8a6a;    /* Secondary */
   --cream: #f9e9d9;     /* Secondary */
   --maroon: #561f22;    /* Secondary */
-  --ink: #0b1418;
+  --ink: #052b38;
   --rule: rgba(5, 43, 56, .16);
   --rule-dark: rgba(249, 233, 217, .18);
   --display: "Libre Caslon Display", "Libre Caslon Text", Georgia, "Times New Roman", serif;
@@ -51,7 +59,7 @@ a { color: inherit; }
 h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.08; margin: 0; text-wrap: balance; letter-spacing: -.01em; }
 p { margin: 0; }
 .ar { font-family: var(--arabic); direction: rtl; }
-.label { font-size: .8125rem; letter-spacing: .08em; text-transform: uppercase; }
+
 
 /* ---------- Header ---------- */
 .site-head {
@@ -132,28 +140,20 @@ p { margin: 0; }
 .menu .page-head p:not(.section) { margin-top: 0; max-width: 26em; }
 .menu .page-head h2 { color: var(--cream); }
 .menu .page-head p, .menu .page-head .section { color: rgba(249, 233, 217, .72); }
-.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.card {
-  display: grid; grid-template-rows: auto auto 1fr auto; gap: 14px;
-  padding: 32px 28px; border-radius: 14px; border: 1px solid var(--rule-dark);
-}
-.card .ar { color: var(--copper); font-size: 1.5rem; line-height: 1; }
-.card h3 { font-size: 2rem; }
-.card p { color: rgba(249, 233, 217, .8); }
-.card ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; border-top: 1px solid var(--rule-dark); padding-top: 16px; font-size: .95rem; }
-.card li { display: flex; justify-content: space-between; gap: 12px; }
-.card li span:last-child { color: var(--copper); font-style: italic; }
-.card.feature { background: var(--copper); border-color: var(--copper); color: var(--navy); }
-.card.feature .ar { color: var(--navy); }
-.card.feature p { color: rgba(5, 43, 56, .82); }
-.card.feature ul { border-top-color: rgba(5, 43, 56, .22); }
-.card.feature li span:last-child { color: var(--navy); }
-.card li span:last-child { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.menu-list { columns: 2 340px; column-gap: 72px; }
+.menu-group { break-inside: avoid; margin-bottom: 48px; }
+.menu-group header { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--copper); }
+.menu-group h3 { font-size: 1.9rem; color: var(--cream); }
+.menu-group .ar { color: var(--copper); font-size: 1.45rem; line-height: 1; }
+.menu-group .intro { margin-top: 12px; color: rgba(249, 233, 217, .7); font-size: .95rem; max-width: 34em; }
+.menu-group ul { list-style: none; margin: 8px 0 0; padding: 0; }
+.menu-group li { display: flex; justify-content: space-between; gap: 16px; padding-block: 9px; border-bottom: 1px solid var(--rule-dark); }
+.menu-group li span:last-child { color: var(--copper); white-space: nowrap; font-variant-numeric: tabular-nums lining-nums; }
 .menu-note { color: rgba(249, 233, 217, .62); font-size: .9rem; }
 .beans { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 12px 40px; padding-top: 32px; border-top: 1px solid var(--rule-dark); }
 .beans h3 { font-size: 1.75rem; color: var(--copper); }
 .beans p { color: rgba(249, 233, 217, .82); max-width: 40em; }
-@media (max-width: 980px) { .cards { grid-template-columns: 1fr; } .beans { grid-template-columns: 1fr; } }
+@media (max-width: 980px) { .beans { grid-template-columns: 1fr; } }
 
 /* ---------- Visit ---------- */
 .visit .row h3 { font-size: 1.4rem; }
@@ -181,7 +181,7 @@ p { margin: 0; }
 .insta h2 { font-size: clamp(2.2rem, 5vw, 4rem); max-width: 14em; }
 .insta .handle { margin-top: 14px; font-size: 1.15rem; overflow-wrap: anywhere; }
 .btn-navy { background: var(--navy); color: var(--cream); }
-.btn-navy:hover { background: var(--maroon); }
+.btn-navy:hover { background: var(--cream); color: var(--navy); }
 
 /* ---------- Footer ---------- */
 .foot { background: var(--navy); color: rgba(249, 233, 217, .75); font-size: .9rem; }
@@ -216,9 +216,8 @@ p { margin: 0; }
   <section class="hero">
     <div class="wrap">
       <div>
-        <p class="label eyebrow">Specialty coffee roastery · Baghdad</p>
-        <h1>Coffee, the way it <em>should</em> be.</h1>
-        <p class="lede">Hamish is the cup prepared in measured steps, with proven expertise and an almost obsessive attention to quality. Roasting, grinding, brewing slowly. Every sip has a story.</p>
+        <h1>Coffee, the way it should be.</h1>
+        <p class="lede">Hamish is the cup prepared in measured steps, with proven expertise and an almost obsessive attention to quality. Roasting, grinding, brewing slowly. Every sip has a story. A specialty roastery in Al-Mansour, Baghdad.</p>
         <p class="ar ar-line" lang="ar">هامش هو الفنجان الي يتحضَّر بخطوات محسوبة، وخبرة معتمدة، واهتمام وسواسِي بالجودة</p>
         <div class="actions">
           <a class="btn btn-copper" href="https://www.instagram.com/hamishroasteryiq/" target="_blank" rel="noopener">
@@ -237,7 +236,6 @@ p { margin: 0; }
   <section class="page" id="story">
     <div class="wrap">
       <div class="page-head">
-        <p class="label section">Our story</p>
         <h2>Balanced taste never happens by chance</h2>
         <p>From the farm to the roaster, every bag is chosen with care. Every step, every grind and every extraction is measured, so the coffee reaches you honest in taste and detail.</p>
       </div>
@@ -261,26 +259,23 @@ p { margin: 0; }
   <section class="page menu" id="menu">
     <div class="wrap">
       <div class="page-head">
-        <p class="label section">What we make</p>
         <h2>From espresso to nitro cold brew</h2>
         <p>Coffee as it should be, plus matcha and cold drinks. Prices in Iraqi dinar, as listed on our in-store menu.</p>
       </div>
-      <div class="cards">
-        <article class="card">
-          <span class="ar" lang="ar">القهوة</span>
-          <h3>Coffee</h3>
-          <p>Espresso first: a balanced extraction, dialled in every day at the grinder corner.</p>
+      <div class="menu-list">
+        <section class="menu-group" aria-label="Coffee">
+          <header><h3>Coffee</h3><span class="ar" lang="ar">القهوة</span></header>
+          <p class="intro">Espresso first: a balanced extraction, dialled in every day at the grinder corner.</p>
           <ul>
             <li><span>Espresso</span><span>5,000</span></li>
             <li><span>Espresso macchiato</span><span>5,000</span></li>
             <li><span>Americano</span><span>5,000</span></li>
             <li><span>Turkish coffee</span><span>3,500</span></li>
           </ul>
-        </article>
-        <article class="card feature">
-          <span class="ar" lang="ar">قهوة التخمير</span>
-          <h3>Brewing coffee</h3>
-          <p>Brewed slowly by hand, or chilled for hours. Cold brew and nitro cold brew for the hot days.</p>
+        </section>
+        <section class="menu-group" aria-label="Brewing coffee">
+          <header><h3>Brewing coffee</h3><span class="ar" lang="ar">قهوة التخمير</span></header>
+          <p class="intro">Brewed slowly by hand, or chilled for hours. Cold brew and nitro cold brew for the hot days.</p>
           <ul>
             <li><span>V60</span><span>7,500</span></li>
             <li><span>Immersion dripper</span><span>7,500</span></li>
@@ -290,11 +285,10 @@ p { margin: 0; }
             <li><span>Nitro cold brew</span><span>6,500</span></li>
             <li><span>Filtered coffee</span><span>5,000</span></li>
           </ul>
-        </article>
-        <article class="card">
-          <span class="ar" lang="ar">مع الحليب</span>
-          <h3>With milk</h3>
-          <p>Smooth texture that makes every sip better than the last.</p>
+        </section>
+        <section class="menu-group" aria-label="With milk">
+          <header><h3>With milk</h3><span class="ar" lang="ar">مع الحليب</span></header>
+          <p class="intro">Smooth texture that makes every sip better than the last.</p>
           <ul>
             <li><span>Cortado</span><span>4,000</span></li>
             <li><span>Flat white special</span><span>5,000</span></li>
@@ -302,11 +296,10 @@ p { margin: 0; }
             <li><span>Cappuccino</span><span>5,500</span></li>
             <li><span>Hot / iced chocolate</span><span>5,000</span></li>
           </ul>
-        </article>
-        <article class="card">
-          <span class="ar" lang="ar">مشروبات بالنكهات</span>
-          <h3>Flavored</h3>
-          <p>Our lattes, with a twist. Sugar-free caramel and vanilla on request.</p>
+        </section>
+        <section class="menu-group" aria-label="Flavored">
+          <header><h3>Flavored</h3><span class="ar" lang="ar">مشروبات بالنكهات</span></header>
+          <p class="intro">Our lattes, with a twist. Sugar-free caramel and vanilla on request.</p>
           <ul>
             <li><span>Spanish latte</span><span>7,500 / 6,500</span></li>
             <li><span>Caramel latte</span><span>7,500 / 6,500</span></li>
@@ -318,11 +311,10 @@ p { margin: 0; }
             <li><span>Mocha</span><span>7,500 / 6,500</span></li>
             <li><span>Coconut latte</span><span>7,500 / 6,500</span></li>
           </ul>
-        </article>
-        <article class="card">
-          <span class="ar" lang="ar">ماتشا</span>
-          <h3>Matcha</h3>
-          <p>Classic or with a touch of fruit. Three flavours, hard to choose.</p>
+        </section>
+        <section class="menu-group" aria-label="Matcha">
+          <header><h3>Matcha</h3><span class="ar" lang="ar">ماتشا</span></header>
+          <p class="intro">Classic or with a touch of fruit. Three flavours, hard to choose.</p>
           <ul>
             <li><span>Matcha</span><span>7,500 / 6,500</span></li>
             <li><span>Raspberry hibiscus</span><span>7,500 / 6,500</span></li>
@@ -332,11 +324,10 @@ p { margin: 0; }
             <li><span>Blueberry</span><span>7,500 / 6,500</span></li>
             <li><span>Mango</span><span>7,500 / 6,500</span></li>
           </ul>
-        </article>
-        <article class="card">
-          <span class="ar" lang="ar">فرابيه ومشروبات باردة</span>
-          <h3>Frappe &amp; cold drinks</h3>
-          <p>Blended shakes and fresh, cold refreshers.</p>
+        </section>
+        <section class="menu-group" aria-label="Frappe and cold drinks">
+          <header><h3>Frappe &amp; cold drinks</h3><span class="ar" lang="ar">فرابيه ومشروبات باردة</span></header>
+          <p class="intro">Blended shakes and fresh, cold refreshers.</p>
           <ul>
             <li><span>Blueberry shake</span><span>6,500</span></li>
             <li><span>Strawberry shake</span><span>6,500</span></li>
@@ -348,7 +339,7 @@ p { margin: 0; }
             <li><span>Cool lime</span><span>6,500</span></li>
             <li><span>Passion lime</span><span>6,500</span></li>
           </ul>
-        </article>
+        </section>
       </div>
       <div class="beans">
         <h3>Beans to take home</h3>
@@ -362,7 +353,6 @@ p { margin: 0; }
     <div class="wrap">
       <div class="word" lang="ar">هامِش</div>
       <div>
-        <p class="label section" style="color: rgba(11,20,24,.6); margin-bottom: 14px;">The name</p>
         <blockquote>In Arabic, <span>hāmish</span> is the margin of the page, the space where you pause and write what matters.</blockquote>
         <p class="note">Hamish is that pause in your day: a good cup, something fresh from the oven, and a moment that feels like home.</p>
       </div>
@@ -372,7 +362,6 @@ p { margin: 0; }
   <section class="page visit" id="visit">
     <div class="wrap">
       <div class="page-head">
-        <p class="label section">Visit</p>
         <h2>Your morning starts here</h2>
         <p>Find us in Al-Mansour, Al-Dawoodi. For questions and orders, call the number below.</p>
       </div>
@@ -429,7 +418,7 @@ p { margin: 0; }
       <a href="tel:+9647730479414">+964 773 047 9414</a>
       <a href="https://www.instagram.com/hamishroasteryiq/" target="_blank" rel="noopener">Instagram</a>
     </nav>
-    <p>© 2026 Hamish Roastery · Al-Mansour, Baghdad</p>
+    <p>© 2026 Hamish Roastery, Al-Mansour, Baghdad</p>
   </div>
 </footer>
 </body>
