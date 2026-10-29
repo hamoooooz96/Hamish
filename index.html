@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hamish Roastery</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Hamish (هامِش) — expertly roasted coffee, fresh bakery and crafted pastries in Iraq.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&display=swap">
+<style>
+/* Layout: brand-deck rhythm — navy covers, cream content pages with a narrow label column and hairline rows */
+:root {
+  --navy: #052b38;      /* Primary */
+  --copper: #cc8a6a;    /* Secondary */
+  --cream: #f9e9d9;     /* Secondary */
+  --maroon: #561f22;    /* Secondary */
+  --ink: #0b1418;
+  --rule: rgba(5, 43, 56, .16);
+  --rule-dark: rgba(249, 233, 217, .18);
+  --display: "Libre Caslon Display", "Libre Caslon Text", Georgia, "Times New Roman", serif;
+  --body: "Libre Caslon Text", Georgia, "Times New Roman", serif;
+  --arabic-logo: "Aref Ruqaa", "Amiri", "Noto Naskh Arabic", serif;
+  --arabic: "Amiri", "Noto Naskh Arabic", serif;
+  --wrap: 1180px;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font: 400 1.0625rem/1.65 var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--navy); }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--copper); outline-offset: 3px; border-radius: 2px; }
+.wrap {
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (min-width: 700px) {
+  .wrap { padding-left: max(40px, env(safe-area-inset-left, 0px)); padding-right: max(40px, env(safe-area-inset-right, 0px)); }
+}
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.08; margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+p { margin: 0; }
+.ar { font-family: var(--arabic); direction: rtl; }
+.label { font-size: .8125rem; letter-spacing: .08em; text-transform: uppercase; }
+
+/* ---------- Header ---------- */
+.site-head {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--navy); color: var(--cream);
+  border-bottom: 1px solid var(--rule-dark);
+}
+.site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--copper); }
+.brand svg { width: 26px; height: auto; flex: none; }
+.brand .ar-logo { font-family: var(--arabic-logo); font-size: 1.6rem; line-height: 1; padding-top: 4px; }
+.brand .en { font-family: var(--display); font-size: 1.2rem; color: var(--cream); }
+.nav { display: flex; align-items: center; gap: 28px; }
+.nav a { text-decoration: none; font-size: .95rem; opacity: .85; }
+.nav a:hover { opacity: 1; color: var(--copper); }
+.nav .ig { opacity: 1; border: 1px solid var(--copper); color: var(--copper); padding: 7px 16px; border-radius: 999px; }
+.nav .ig:hover { background: var(--copper); color: var(--navy); }
+@media (max-width: 720px) { .nav a:not(.ig) { display: none; } .brand .en { display: none; } }
+
+/* ---------- Hero ---------- */
+.hero { background: var(--navy); color: var(--cream); overflow: hidden; }
+.hero .wrap {
+  display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
+  align-items: center; gap: 48px; padding-block: 88px 104px;
+}
+.hero .eyebrow { color: var(--copper); margin-bottom: 28px; }
+.hero h1 { font-size: clamp(2.9rem, 7.2vw, 6.2rem); }
+.hero h1 em { font-style: normal; color: var(--copper); }
+.hero .lede { margin-top: 28px; max-width: 34em; font-size: 1.15rem; color: rgba(249, 233, 217, .82); }
+.hero .ar-line { margin-top: 18px; text-align: left; font-size: 1.45rem; color: var(--copper); }
+.actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
+  padding: 14px 26px; border-radius: 999px; font-size: 1rem; transition: background .2s, color .2s;
+}
+.btn-copper { background: var(--copper); color: var(--navy); }
+.btn-copper:hover { background: var(--cream); }
+.btn-line { border: 1px solid var(--rule-dark); color: var(--cream); }
+.btn-line:hover { border-color: var(--copper); color: var(--copper); }
+.btn svg { width: 18px; height: 18px; }
+.mark-stage { display: grid; place-items: center; }
+.mark-stage svg { width: min(100%, 300px); height: auto; overflow: visible; }
+.mark-stage path { stroke-dasharray: 1; stroke-dashoffset: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .mark-stage path { animation: draw 2.4s cubic-bezier(.6, .05, .25, 1) .2s both; }
+  @keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+}
+@media (max-width: 820px) {
+  .hero .wrap { grid-template-columns: 1fr; padding-block: 56px 72px; gap: 40px; }
+  .mark-stage { order: -1; justify-items: start; }
+  .mark-stage svg { width: 120px; }
+}
+
+/* ---------- Content pages ---------- */
+.page { padding-block: 104px; }
+.page .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr); gap: 32px 64px; }
+.page-head h2 { font-size: clamp(2rem, 3.6vw, 2.8rem); color: var(--navy); }
+.page-head p { margin-top: 18px; max-width: 22em; color: rgba(11, 20, 24, .78); }
+.page-head .section { color: rgba(11, 20, 24, .6); margin-bottom: 14px; }
+.rows { display: grid; }
+.row {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr); gap: 12px 40px;
+  padding-block: 34px; border-top: 1px solid var(--rule);
+}
+.row:last-child { border-bottom: 1px solid var(--rule); }
+.row h3 { font-size: 1.75rem; color: var(--navy); }
+.row p { max-width: 36em; }
+@media (max-width: 820px) {
+  .page { padding-block: 72px; }
+  .page .wrap, .row { grid-template-columns: 1fr; }
+}
+
+/* ---------- Menu ---------- */
+.menu { background: var(--navy); color: var(--cream); }
+.menu .wrap { grid-template-columns: 1fr; gap: 48px; }
+.menu .page-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 18px 64px; }
+.menu .page-head .section { flex-basis: 100%; margin-bottom: -4px; }
+.menu .page-head p:not(.section) { margin-top: 0; max-width: 26em; }
+.menu .page-head h2 { color: var(--cream); }
+.menu .page-head p, .menu .page-head .section { color: rgba(249, 233, 217, .72); }
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.card {
+  display: grid; grid-template-rows: auto auto 1fr auto; gap: 14px;
+  padding: 32px 28px; border-radius: 14px; border: 1px solid var(--rule-dark);
+}
+.card .ar { color: var(--copper); font-size: 1.5rem; line-height: 1; }
+.card h3 { font-size: 2rem; }
+.card p { color: rgba(249, 233, 217, .8); }
+.card ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; border-top: 1px solid var(--rule-dark); padding-top: 16px; font-size: .95rem; }
+.card li { display: flex; justify-content: space-between; gap: 12px; }
+.card li span:last-child { color: var(--copper); font-style: italic; }
+.card.feature { background: var(--maroon); border-color: var(--maroon); }
+@media (max-width: 980px) { .cards { grid-template-columns: 1fr; } }
+
+/* ---------- Name ---------- */
+.name-band .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr); gap: 32px 64px; align-items: center; }
+.name-band .word { font-family: var(--arabic-logo); font-size: clamp(5rem, 14vw, 10rem); line-height: 1; color: var(--copper); direction: rtl; }
+.name-band blockquote { margin: 0; font-family: var(--display); font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.25; color: var(--navy); max-width: 22em; text-wrap: balance; }
+.name-band blockquote span { color: var(--copper); }
+.name-band .note { margin-top: 18px; color: rgba(11, 20, 24, .7); max-width: 34em; }
+@media (max-width: 820px) { .name-band .wrap { grid-template-columns: 1fr; } }
+
+/* ---------- Instagram ---------- */
+.insta { background: var(--copper); color: var(--navy); }
+.insta .wrap { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 32px; padding-block: 88px; }
+.insta h2 { font-size: clamp(2.2rem, 5vw, 4rem); max-width: 14em; }
+.insta .handle { margin-top: 14px; font-size: 1.15rem; overflow-wrap: anywhere; }
+.btn-navy { background: var(--navy); color: var(--cream); }
+.btn-navy:hover { background: var(--maroon); }
+
+/* ---------- Footer ---------- */
+.foot { background: var(--navy); color: rgba(249, 233, 217, .75); font-size: .9rem; }
+.foot .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; padding-block: 48px; }
+.foot .lockup { display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--copper); }
+.foot .lockup svg { width: 40px; height: auto; }
+.foot .lockup .ar-logo { font-family: var(--arabic-logo); font-size: 1.9rem; line-height: 1; }
+.foot nav { display: flex; flex-wrap: wrap; gap: 24px; }
+.foot a { text-decoration: none; }
+.foot a:hover { color: var(--copper); }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Hamish home">
+      <svg viewBox="0 0 100 140" fill="none" aria-hidden="true"><path d="M24 118C6 96 4 44 24 22 38 6 62 2 65 16 68 30 58 56 50 74 42 92 36 120 46 129 56 138 76 130 86 108 98 82 94 40 76 16" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="ar-logo" lang="ar">هامِش</span>
+      <span class="en">Hamish</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#story">Our story</a>
+      <a href="#menu">What we make</a>
+      <a href="#name">The name</a>
+      <a class="ig" href="https://www.instagram.com/hamishroasteryiq/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="label eyebrow">Roastery · Bakery · Pastry — Iraq</p>
+        <h1>Roasted with care. <em>Baked</em> every morning.</h1>
+        <p class="lede">Expertly roasted coffee, fresh bread and crafted pastries, made for the everyday moments you share with the people around you.</p>
+        <p class="ar ar-line" lang="ar">قهوة محمّصة بإتقان، ومخبوزات طازجة كل صباح</p>
+        <div class="actions">
+          <a class="btn btn-copper" href="https://www.instagram.com/hamishroasteryiq/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+            Follow @hamishroasteryiq
+          </a>
+          <a class="btn btn-line" href="#menu">See what we make</a>
+        </div>
+      </div>
+      <div class="mark-stage" aria-hidden="true">
+        <svg viewBox="0 0 100 140" fill="none"><path pathLength="1" d="M24 118C6 96 4 44 24 22 38 6 62 2 65 16 68 30 58 56 50 74 42 92 36 120 46 129 56 138 76 130 86 108 98 82 94 40 76 16" stroke="#cc8a6a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" id="story">
+    <div class="wrap">
+      <div class="page-head">
+        <p class="label section">Our story</p>
+        <h2>Quality you can taste in every visit</h2>
+        <p>We roast, bake and laminate in house, so every cup and every crumb carries the same care.</p>
+      </div>
+      <div class="rows">
+        <div class="row">
+          <h3>Purpose</h3>
+          <p>To elevate everyday moments through expertly roasted coffee, fresh bakery and crafted pastries, bringing people together around quality, flavour and genuine craftsmanship.</p>
+        </div>
+        <div class="row">
+          <h3>Vision</h3>
+          <p>To become a leading destination for coffee, bakery and pastry, recognised for exceptional quality, distinctive taste and memorable experiences in every visit.</p>
+        </div>
+        <div class="row">
+          <h3>Mission</h3>
+          <p>To consistently deliver high-quality coffee, bakery and pastries through expert craftsmanship, premium ingredients and attention to detail, creating a welcoming place that keeps people coming back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page menu" id="menu">
+    <div class="wrap">
+      <div class="page-head">
+        <p class="label section">What we make</p>
+        <h2>Three crafts, one counter</h2>
+        <p>Ask the team what came out of the roaster and the oven today. Our daily line-up is on Instagram.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="ar" lang="ar">قهوة</span>
+          <h3>Coffee</h3>
+          <p>Small-batch roasts with notes of cocoa, caramel and ripe fruit. Pulled as a syrupy espresso or brewed slow and clear.</p>
+          <ul>
+            <li><span>Espresso &amp; milk drinks</span><span>daily</span></li>
+            <li><span>Filter &amp; pour-over</span><span>daily</span></li>
+            <li><span>Beans to take home</span><span>fresh roast</span></li>
+          </ul>
+        </article>
+        <article class="card feature">
+          <span class="ar" lang="ar">مخبوزات</span>
+          <h3>Bakery</h3>
+          <p>Crackling crusts and soft, open crumbs, out of the oven while the morning is still quiet. Warm, wheaty and honest.</p>
+          <ul>
+            <li><span>Sourdough loaves</span><span>morning</span></li>
+            <li><span>Breakfast breads</span><span>morning</span></li>
+            <li><span>Savoury bakes</span><span>all day</span></li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="ar" lang="ar">حلويات</span>
+          <h3>Pastry</h3>
+          <p>Buttery layers that shatter at the first bite, glossy fillings and a light hand with sugar. Made to go with your cup.</p>
+          <ul>
+            <li><span>Croissants &amp; viennoiserie</span><span>morning</span></li>
+            <li><span>Tarts &amp; cakes</span><span>all day</span></li>
+            <li><span>Seasonal specials</span><span>rotating</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="page name-band" id="name">
+    <div class="wrap">
+      <div class="word" lang="ar">هامِش</div>
+      <div>
+        <p class="label section" style="color: rgba(11,20,24,.6); margin-bottom: 14px;">The name</p>
+        <blockquote>In Arabic, <span>hāmish</span> is the margin of the page, the space where you pause and write what matters.</blockquote>
+        <p class="note">Hamish is that pause in your day: a good cup, something fresh from the oven, and a moment that feels like home.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="insta">
+    <div class="wrap">
+      <div>
+        <h2>See today’s roast and bake on Instagram</h2>
+        <p class="handle">@hamishroasteryiq</p>
+      </div>
+      <a class="btn btn-navy" href="https://www.instagram.com/hamishroasteryiq/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+        Open Instagram
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="lockup" aria-label="Hamish">
+      <svg viewBox="0 0 100 140" fill="none" aria-hidden="true"><path d="M24 118C6 96 4 44 24 22 38 6 62 2 65 16 68 30 58 56 50 74 42 92 36 120 46 129 56 138 76 130 86 108 98 82 94 40 76 16" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="ar-logo" lang="ar">هامِش</span>
+    </div>
+    <nav aria-label="Footer">
+      <a href="#story">Our story</a>
+      <a href="#menu">What we make</a>
+      <a href="https://www.instagram.com/hamishroasteryiq/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <p>© 2026 Hamish Roastery · Iraq</p>
+  </div>
+</footer>
+</body>
+</html>
