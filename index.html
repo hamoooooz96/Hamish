@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Hamish Roastery</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Hamish (هامِش) — expertly roasted coffee, fresh bakery and crafted pastries in Iraq.">
+<meta name="description" content="Hamish Roastery (محمصة هامش) — specialty coffee roastery in Al-Mansour, Al-Dawoodi, Baghdad. Espresso, V60, Chemex, cold brew, nitro and matcha.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&display=swap">
@@ -143,8 +143,29 @@ p { margin: 0; }
 .card ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; border-top: 1px solid var(--rule-dark); padding-top: 16px; font-size: .95rem; }
 .card li { display: flex; justify-content: space-between; gap: 12px; }
 .card li span:last-child { color: var(--copper); font-style: italic; }
-.card.feature { background: var(--maroon); border-color: var(--maroon); }
-@media (max-width: 980px) { .cards { grid-template-columns: 1fr; } }
+.card.feature { background: var(--copper); border-color: var(--copper); color: var(--navy); }
+.card.feature .ar { color: var(--navy); }
+.card.feature p { color: rgba(5, 43, 56, .82); }
+.card.feature ul { border-top-color: rgba(5, 43, 56, .22); }
+.card.feature li span:last-child { color: var(--navy); }
+.card li span:last-child { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.menu-note { color: rgba(249, 233, 217, .62); font-size: .9rem; }
+.beans { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 12px 40px; padding-top: 32px; border-top: 1px solid var(--rule-dark); }
+.beans h3 { font-size: 1.75rem; color: var(--copper); }
+.beans p { color: rgba(249, 233, 217, .82); max-width: 40em; }
+@media (max-width: 980px) { .cards { grid-template-columns: 1fr; } .beans { grid-template-columns: 1fr; } }
+
+/* ---------- Visit ---------- */
+.visit .row h3 { font-size: 1.4rem; }
+.visit .ar-addr { font-size: 1.35rem; line-height: 1.5; color: var(--navy); text-align: right; }
+.visit .en-addr { margin-top: 8px; color: rgba(11, 20, 24, .72); }
+.visit .tel { font-family: var(--display); font-size: 1.9rem; color: var(--navy); text-decoration: none; direction: ltr; unicode-bidi: isolate; }
+.visit .tel:hover { color: var(--copper); }
+.visit .actions { margin-top: 0; }
+.btn-navy-solid { background: var(--navy); color: var(--cream); }
+.btn-navy-solid:hover { background: var(--copper); color: var(--navy); }
+.btn-outline { border: 1px solid var(--navy); color: var(--navy); }
+.btn-outline:hover { border-color: var(--copper); color: var(--copper); }
 
 /* ---------- Name ---------- */
 .name-band .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr); gap: 32px 64px; align-items: center; }
@@ -185,7 +206,7 @@ p { margin: 0; }
     <nav class="nav" aria-label="Main">
       <a href="#story">Our story</a>
       <a href="#menu">What we make</a>
-      <a href="#name">The name</a>
+      <a href="#visit">Visit</a>
       <a class="ig" href="https://www.instagram.com/hamishroasteryiq/" target="_blank" rel="noopener">Instagram</a>
     </nav>
   </div>
@@ -195,16 +216,16 @@ p { margin: 0; }
   <section class="hero">
     <div class="wrap">
       <div>
-        <p class="label eyebrow">Roastery · Bakery · Pastry — Iraq</p>
-        <h1>Roasted with care. <em>Baked</em> every morning.</h1>
-        <p class="lede">Expertly roasted coffee, fresh bread and crafted pastries, made for the everyday moments you share with the people around you.</p>
-        <p class="ar ar-line" lang="ar">قهوة محمّصة بإتقان، ومخبوزات طازجة كل صباح</p>
+        <p class="label eyebrow">Specialty coffee roastery · Baghdad</p>
+        <h1>Coffee, the way it <em>should</em> be.</h1>
+        <p class="lede">Hamish is the cup prepared in measured steps, with proven expertise and an almost obsessive attention to quality. Roasting, grinding, brewing slowly. Every sip has a story.</p>
+        <p class="ar ar-line" lang="ar">هامش هو الفنجان الي يتحضَّر بخطوات محسوبة، وخبرة معتمدة، واهتمام وسواسِي بالجودة</p>
         <div class="actions">
           <a class="btn btn-copper" href="https://www.instagram.com/hamishroasteryiq/" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
             Follow @hamishroasteryiq
           </a>
-          <a class="btn btn-line" href="#menu">See what we make</a>
+          <a class="btn btn-line" href="#menu">See the menu</a>
         </div>
       </div>
       <div class="mark-stage" aria-hidden="true">
@@ -217,8 +238,8 @@ p { margin: 0; }
     <div class="wrap">
       <div class="page-head">
         <p class="label section">Our story</p>
-        <h2>Quality you can taste in every visit</h2>
-        <p>We roast, bake and laminate in house, so every cup and every crumb carries the same care.</p>
+        <h2>Balanced taste never happens by chance</h2>
+        <p>From the farm to the roaster, every bag is chosen with care. Every step, every grind and every extraction is measured, so the coffee reaches you honest in taste and detail.</p>
       </div>
       <div class="rows">
         <div class="row">
@@ -241,41 +262,99 @@ p { margin: 0; }
     <div class="wrap">
       <div class="page-head">
         <p class="label section">What we make</p>
-        <h2>Three crafts, one counter</h2>
-        <p>Ask the team what came out of the roaster and the oven today. Our daily line-up is on Instagram.</p>
+        <h2>From espresso to nitro cold brew</h2>
+        <p>Coffee as it should be, plus matcha and cold drinks. Prices in Iraqi dinar, as listed on our in-store menu.</p>
       </div>
       <div class="cards">
         <article class="card">
-          <span class="ar" lang="ar">قهوة</span>
+          <span class="ar" lang="ar">القهوة</span>
           <h3>Coffee</h3>
-          <p>Small-batch roasts with notes of cocoa, caramel and ripe fruit. Pulled as a syrupy espresso or brewed slow and clear.</p>
+          <p>Espresso first: a balanced extraction, dialled in every day at the grinder corner.</p>
           <ul>
-            <li><span>Espresso &amp; milk drinks</span><span>daily</span></li>
-            <li><span>Filter &amp; pour-over</span><span>daily</span></li>
-            <li><span>Beans to take home</span><span>fresh roast</span></li>
+            <li><span>Espresso</span><span>5,000</span></li>
+            <li><span>Espresso macchiato</span><span>5,000</span></li>
+            <li><span>Americano</span><span>5,000</span></li>
+            <li><span>Turkish coffee</span><span>3,500</span></li>
           </ul>
         </article>
         <article class="card feature">
-          <span class="ar" lang="ar">مخبوزات</span>
-          <h3>Bakery</h3>
-          <p>Crackling crusts and soft, open crumbs, out of the oven while the morning is still quiet. Warm, wheaty and honest.</p>
+          <span class="ar" lang="ar">قهوة التخمير</span>
+          <h3>Brewing coffee</h3>
+          <p>Brewed slowly by hand, or chilled for hours. Cold brew and nitro cold brew for the hot days.</p>
           <ul>
-            <li><span>Sourdough loaves</span><span>morning</span></li>
-            <li><span>Breakfast breads</span><span>morning</span></li>
-            <li><span>Savoury bakes</span><span>all day</span></li>
+            <li><span>V60</span><span>7,500</span></li>
+            <li><span>Immersion dripper</span><span>7,500</span></li>
+            <li><span>Chemex</span><span>7,500</span></li>
+            <li><span>AeroPress</span><span>6,500</span></li>
+            <li><span>Cold brew</span><span>6,500</span></li>
+            <li><span>Nitro cold brew</span><span>6,500</span></li>
+            <li><span>Filtered coffee</span><span>5,000</span></li>
           </ul>
         </article>
         <article class="card">
-          <span class="ar" lang="ar">حلويات</span>
-          <h3>Pastry</h3>
-          <p>Buttery layers that shatter at the first bite, glossy fillings and a light hand with sugar. Made to go with your cup.</p>
+          <span class="ar" lang="ar">مع الحليب</span>
+          <h3>With milk</h3>
+          <p>Smooth texture that makes every sip better than the last.</p>
           <ul>
-            <li><span>Croissants &amp; viennoiserie</span><span>morning</span></li>
-            <li><span>Tarts &amp; cakes</span><span>all day</span></li>
-            <li><span>Seasonal specials</span><span>rotating</span></li>
+            <li><span>Cortado</span><span>4,000</span></li>
+            <li><span>Flat white special</span><span>5,000</span></li>
+            <li><span>Latte</span><span>5,500</span></li>
+            <li><span>Cappuccino</span><span>5,500</span></li>
+            <li><span>Hot / iced chocolate</span><span>5,000</span></li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="ar" lang="ar">مشروبات بالنكهات</span>
+          <h3>Flavored</h3>
+          <p>Our lattes, with a twist. Sugar-free caramel and vanilla on request.</p>
+          <ul>
+            <li><span>Spanish latte</span><span>7,500 / 6,500</span></li>
+            <li><span>Caramel latte</span><span>7,500 / 6,500</span></li>
+            <li><span>Sugar-free caramel latte</span><span>7,500 / 6,500</span></li>
+            <li><span>Vanilla latte</span><span>7,500 / 6,500</span></li>
+            <li><span>Sugar-free vanilla latte</span><span>7,500 / 6,500</span></li>
+            <li><span>Lotus latte</span><span>7,500 / 6,500</span></li>
+            <li><span>White mocha</span><span>7,500 / 6,500</span></li>
+            <li><span>Mocha</span><span>7,500 / 6,500</span></li>
+            <li><span>Coconut latte</span><span>7,500 / 6,500</span></li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="ar" lang="ar">ماتشا</span>
+          <h3>Matcha</h3>
+          <p>Classic or with a touch of fruit. Three flavours, hard to choose.</p>
+          <ul>
+            <li><span>Matcha</span><span>7,500 / 6,500</span></li>
+            <li><span>Raspberry hibiscus</span><span>7,500 / 6,500</span></li>
+            <li><span>Coconut</span><span>7,500 / 6,500</span></li>
+            <li><span>Vanilla</span><span>7,500 / 6,500</span></li>
+            <li><span>Strawberry</span><span>7,500 / 6,500</span></li>
+            <li><span>Blueberry</span><span>7,500 / 6,500</span></li>
+            <li><span>Mango</span><span>7,500 / 6,500</span></li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="ar" lang="ar">فرابيه ومشروبات باردة</span>
+          <h3>Frappe &amp; cold drinks</h3>
+          <p>Blended shakes and fresh, cold refreshers.</p>
+          <ul>
+            <li><span>Blueberry shake</span><span>6,500</span></li>
+            <li><span>Strawberry shake</span><span>6,500</span></li>
+            <li><span>Passion fruit blender</span><span>6,500</span></li>
+            <li><span>Café frappe / flavoured</span><span>6,500</span></li>
+            <li><span>Raspberry hibiscus</span><span>6,500</span></li>
+            <li><span>Orange juice</span><span>6,000</span></li>
+            <li><span>Yuzu</span><span>6,500</span></li>
+            <li><span>Cool lime</span><span>6,500</span></li>
+            <li><span>Passion lime</span><span>6,500</span></li>
           </ul>
         </article>
       </div>
+      <div class="beans">
+        <h3>Beans to take home</h3>
+        <p>Our own roasts, bagged in house. Two origins, two flavours, one story. Our recent espresso from El Salvador brings notes of caramel, cherry and cocoa. Ask the team what is on the shelf today.</p>
+      </div>
+      <p class="menu-note">Menu and prices may change. Call us to confirm before you visit.</p>
     </div>
   </section>
 
@@ -290,10 +369,43 @@ p { margin: 0; }
     </div>
   </section>
 
+  <section class="page visit" id="visit">
+    <div class="wrap">
+      <div class="page-head">
+        <p class="label section">Visit</p>
+        <h2>Your morning starts here</h2>
+        <p>Find us in Al-Mansour, Al-Dawoodi. For questions and orders, call the number below.</p>
+      </div>
+      <div class="rows">
+        <div class="row">
+          <h3>Address</h3>
+          <div>
+            <p class="ar ar-addr" lang="ar">المنصور، الداوودي — نهاية شارع مطعم الساعة، مجاور NVN، قرب سكة الحديد</p>
+            <p class="en-addr">Al-Mansour, Al-Dawoodi, Baghdad. End of Al-Saa Restaurant street, next to NVN, near the railway.</p>
+          </div>
+        </div>
+        <div class="row">
+          <h3>Call &amp; order</h3>
+          <a class="tel" href="tel:+9647730479414">+964 773 047 9414</a>
+        </div>
+        <div class="row">
+          <h3>Directions</h3>
+          <div class="actions">
+            <a class="btn btn-navy-solid" href="https://maps.app.goo.gl/n654SAwnXCHGoM8R9" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              Open in Google Maps
+            </a>
+            <a class="btn btn-outline" href="tel:+9647730479414">Call now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="insta">
     <div class="wrap">
       <div>
-        <h2>See today’s roast and bake on Instagram</h2>
+        <h2>The next chapter is coming. Follow along.</h2>
         <p class="handle">@hamishroasteryiq</p>
       </div>
       <a class="btn btn-navy" href="https://www.instagram.com/hamishroasteryiq/" target="_blank" rel="noopener">
@@ -313,9 +425,11 @@ p { margin: 0; }
     <nav aria-label="Footer">
       <a href="#story">Our story</a>
       <a href="#menu">What we make</a>
+      <a href="#visit">Visit</a>
+      <a href="tel:+9647730479414">+964 773 047 9414</a>
       <a href="https://www.instagram.com/hamishroasteryiq/" target="_blank" rel="noopener">Instagram</a>
     </nav>
-    <p>© 2026 Hamish Roastery · Iraq</p>
+    <p>© 2026 Hamish Roastery · Al-Mansour, Baghdad</p>
   </div>
 </footer>
 </body>
